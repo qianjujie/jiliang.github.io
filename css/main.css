@@ -585,7 +585,8 @@ pre .preprocessor,
 pre .built_in,
 pre .literal,
 pre .params,
-pre .constant {
+pre .constant,
+pre .command {
   color: #f5871f;
 }
 pre .ruby .class .title,
@@ -597,7 +598,10 @@ pre .value,
 pre .inheritance,
 pre .header,
 pre .ruby .symbol,
-pre .xml .cdata {
+pre .xml .cdata,
+pre .special,
+pre .number,
+pre .formula {
   color: #718c00;
 }
 pre .title,
@@ -1277,6 +1281,7 @@ pre .javascript .function {
   font-size: 14px;
   background: #fff;
   border-radius: 2px;
+  line-height: 2;
 }
 .posts-expand .post-tags {
   margin-top: 40px;
@@ -1508,7 +1513,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #3cffff;
+  background: #fff73b;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2046,8 +2051,7 @@ a.search-result {
   list-style: none;
 }
 .category-all-page .category-list-item {
-  display: inline-block;
-  margin: 10px;
+  margin: 5px 10px;
 }
 .category-all-page .category-list-count {
   color: #bbb;
@@ -2059,6 +2063,9 @@ a.search-result {
 .category-all-page .category-list-count:after {
   display: inline;
   content: ") ";
+}
+.category-all-page .category-list-child {
+  padding-left: 10px;
 }
 .page-post-detail .sidebar-toggle-line {
   background: #222;
