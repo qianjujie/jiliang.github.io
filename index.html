@@ -551,7 +551,7 @@ More info: Deployment
               
                 
                 <a class="post-title-link" href="/2015/03/14/Jsonp/" itemprop="url">
-                  JsonP'
+                  JsonP
                 </a>
               
             
@@ -619,7 +619,12 @@ More info: Deployment
       
         
           
-          jsonp.html12345678910111213141516171819202122232425262728293031&lt;!doctype html&gt;&lt;html lang="en"&gt;&lt;head&gt;	&lt;meta charset="UTF-8"&gt;	&lt;title&gt;Document&lt;/title&gt;	&lt;script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"&gt;&lt;/script&gt;	&lt;script type="text/javascript"&gt;window.onload = function() &#123;	var btn1 = document.getElementById('btn1');	btn1.onclick = function() &#123;		$.ajax(&#123;			url: 'http://api.money.126.net/data/fe
+          Jsonp的简单例子JSONP 是JSON with padding（填充式JSON 或参数式JSON）的简写，是应用JSON 的一种新方法，在后来的Web 服务中非常流行。JSONP 看起来与JSON 差不多，只不过是被包含在函数调用中的JSON，就像下面这样。
+1callback(&#123; &quot;name&quot;: &quot;Nicholas&quot; &#125;);
+JSONP 由两部分组成：回调函数和数据。回调函数是当响应到来时应该在页面中调用的函数。回调函数的名字一般是在请求中指定的。而数据就是传入回调函数中的JSON数据。下面是一个典型的JSONP请求。
+1http://freegeoip.net/json/?callback=handleResponse
+这个 URL 是在请求一个JSONP 地理定位服务。通过查询字符串来指定JSONP 服务的回调参数是很常见的，就像上面的URL 所示，这里指定的回调函数的名字叫handleResponse()。
+JSONP 是通过动态&lt;script&gt;元素来使用的，使用时可以为src 属性指定一个跨域URL
           ...
 
           <div class="post-more-link text-center">
