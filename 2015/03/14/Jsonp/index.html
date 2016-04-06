@@ -61,15 +61,15 @@
 1callback(&amp;#123; &amp;quot;name&amp;quot;: &amp;quot;Nicholas&amp;quot; &amp;#125;);
 JS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JsonP">
+<meta property="og:title" content="Jsonp的简单例子">
 <meta property="og:url" content="http://yoursite.com/2015/03/14/Jsonp/index.html">
 <meta property="og:site_name" content="矶良的博客">
 <meta property="og:description" content="Jsonp的简单例子JSONP 是JSON with padding（填充式JSON 或参数式JSON）的简写，是应用JSON 的一种新方法，在后来的Web 服务中非常流行。JSONP 看起来与JSON 差不多，只不过是被包含在函数调用中的JSON，就像下面这样。
 1callback(&amp;#123; &amp;quot;name&amp;quot;: &amp;quot;Nicholas&amp;quot; &amp;#125;);
 JS">
-<meta property="og:updated_time" content="2016-04-06T07:23:51.153Z">
+<meta property="og:updated_time" content="2016-04-06T07:33:11.995Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JsonP">
+<meta name="twitter:title" content="Jsonp的简单例子">
 <meta name="twitter:description" content="Jsonp的简单例子JSONP 是JSON with padding（填充式JSON 或参数式JSON）的简写，是应用JSON 的一种新方法，在后来的Web 服务中非常流行。JSONP 看起来与JSON 差不多，只不过是被包含在函数调用中的JSON，就像下面这样。
 1callback(&amp;#123; &amp;quot;name&amp;quot;: &amp;quot;Nicholas&amp;quot; &amp;#125;);
 JS">
@@ -84,13 +84,13 @@ JS">
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: 0,
+      userId: 6262571571135645000,
       author: '博主'
     }
   };
 </script>
 
-  <title> JsonP | 矶良的博客 </title>
+  <title> Jsonp的简单例子 | 矶良的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -240,7 +240,7 @@ JS">
             
             
               
-                JsonP
+                Jsonp的简单例子
               
             
           </h1>
@@ -292,6 +292,15 @@ JS">
           
 
           
+          
+             <span id="/2015/03/14/Jsonp/" class="leancloud_visitors" data-flag-title="Jsonp的简单例子">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
           
 
         </div>
@@ -364,7 +373,7 @@ JS">
     <div class="post-spread">
       
         <div class="ds-share flat" data-thread-key="2015/03/14/Jsonp/"
-     data-title="JsonP"
+     data-title="Jsonp的简单例子"
      data-content=""
      data-url="http://yoursite.com/2015/03/14/Jsonp/">
   <div class="ds-share-inline">
@@ -397,7 +406,7 @@ JS">
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2015/03/14/Jsonp/"
-           data-title="JsonP" data-url="http://yoursite.com/2015/03/14/Jsonp/">
+           data-title="Jsonp的简单例子" data-url="http://yoursite.com/2015/03/14/Jsonp/">
       </div>
     
   </div>
@@ -835,6 +844,99 @@ JS">
   
 
   
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("46H4mOlrrtxofWrwBBlVPBMz-gzGzoHsz", "bC9GTf8ngg2aSP9kg1lges6y");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
 
 </body>
