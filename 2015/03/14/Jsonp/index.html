@@ -67,7 +67,7 @@ JSONP 由两部分组成：回调函数和数据。回调函数是当响应到�
 <meta property="og:description" content="JSONP 是JSON with padding（填充式JSON 或参数式JSON）的简写，是应用JSON 的一种新方法，在后来的Web 服务中非常流行。JSONP 看起来与JSON 差不多，只不过是被包含在函数调用中的JSON，就像下面这样。
 1callback(&amp;#123; &quot;name&quot;: &quot;Nicholas&quot; &amp;#125;);
 JSONP 由两部分组成：回调函数和数据。回调函数是当响应到来时">
-<meta property="og:updated_time" content="2016-04-06T10:51:18.068Z">
+<meta property="og:updated_time" content="2016-04-06T10:53:52.090Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Jsonp的简单例子">
 <meta name="twitter:description" content="JSONP 是JSON with padding（填充式JSON 或参数式JSON）的简写，是应用JSON 的一种新方法，在后来的Web 服务中非常流行。JSONP 看起来与JSON 差不多，只不过是被包含在函数调用中的JSON，就像下面这样。
@@ -317,7 +317,7 @@ JSONP 由两部分组成：回调函数和数据。回调函数是当响应到�
         <p>JSONP 是JSON with padding（填充式JSON 或参数式JSON）的简写，是应用JSON 的一种新方法，在后来的Web 服务中非常流行。JSONP 看起来与JSON 差不多，只不过是被包含在函数调用中的JSON，就像下面这样。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">callback(&#123; <span class="string">"name"</span>: <span class="string">"Nicholas"</span> &#125;);</span><br></pre></td></tr></table></figure>
 <p>JSONP 由两部分组成：回调函数和数据。回调函数是当响应到来时应该在页面中调用的函数。回调函数的名字一般是在请求中指定的。而数据就是传入回调函数中的JSON数据。下面是一个典型的JSONP请求。</p>
-<figure class="highlight plain"><figcaption><span>jsonp.js</span><a href="http://www.baidu.com/" target="_blank" rel="external">jsonp.js </a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://freegeoip.net/json/?callback=handleResponse</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://freegeoip.net/json/?callback=handleResponse</span><br></pre></td></tr></table></figure>
 <p>这个 URL 是在请求一个JSONP 地理定位服务。通过查询字符串来指定JSONP 服务的回调参数是很常见的，就像上面的URL 所示，这里指定的回调函数的名字叫handleResponse()。</p>
 <p>JSONP 是通过动态&lt;script&gt;元素来使用的，使用时可以为src 属性指定一个跨域URL。这里的&lt;script&gt;元素与&lt;img&gt;元素类似，都有能力不受限制地从其他域加载资源。因为JSONP 是有效的JavaScript 代码，所以在请求完成后，即在JSONP响应加载到页面中以后，就会立即执行。来看一个例子。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">handleResponse</span>(<span class="params">response</span>)</span>&#123;</span><br><span class="line">	alert(<span class="string">"You’re at IP address "</span> + response.ip + <span class="string">", which is in "</span> +</span><br><span class="line">	response.city + <span class="string">", "</span> + response.region_name);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> script = <span class="built_in">document</span>.createElement(<span class="string">"script"</span>);</span><br><span class="line">script.src = <span class="string">"http://freegeoip.net/json/?callback=handleResponse"</span>;</span><br><span class="line"><span class="built_in">document</span>.body.insertBefore(script, <span class="built_in">document</span>.body.firstChild);</span><br></pre></td></tr></table></figure>
