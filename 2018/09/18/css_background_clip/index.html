@@ -101,7 +101,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="css,前端开发," />
 
 
 
@@ -112,16 +112,20 @@
 
 
 
-<meta name="description" content="Paler than the moon">
-<meta property="og:type" content="website">
-<meta property="og:title" content="矶良的博客">
-<meta property="og:url" content="http://yoursite.com/tags/前端开发/index.html">
+<meta name="description" content="CSS background-clip 属性说起 background-clip ，可能很多人都很陌生。Clip 的意思为修剪，那么从字面意思上理解，background-clip 的意思即是背景裁剪。 简单而言，background-clip 的作用就是设置元素的背景（背景图片或颜色）的填充规则。 与 box-sizing 的取值非常类似，通常而言，它有 3 个取值： 123456&amp;#123;">
+<meta name="keywords" content="css,前端开发">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css实现文字填充图片">
+<meta property="og:url" content="http://yoursite.com/2018/09/18/css_background_clip/index.html">
 <meta property="og:site_name" content="矶良的博客">
-<meta property="og:description" content="Paler than the moon">
+<meta property="og:description" content="CSS background-clip 属性说起 background-clip ，可能很多人都很陌生。Clip 的意思为修剪，那么从字面意思上理解，background-clip 的意思即是背景裁剪。 简单而言，background-clip 的作用就是设置元素的背景（背景图片或颜色）的填充规则。 与 box-sizing 的取值非常类似，通常而言，它有 3 个取值： 123456&amp;#123;">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/uploads/clip.png">
+<meta property="og:updated_time" content="2018-10-19T09:30:01.951Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="矶良的博客">
-<meta name="twitter:description" content="Paler than the moon">
+<meta name="twitter:title" content="css实现文字填充图片">
+<meta name="twitter:description" content="CSS background-clip 属性说起 background-clip ，可能很多人都很陌生。Clip 的意思为修剪，那么从字面意思上理解，background-clip 的意思即是背景裁剪。 简单而言，background-clip 的作用就是设置元素的背景（背景图片或颜色）的填充规则。 与 box-sizing 的取值非常类似，通常而言，它有 3 个取值： 123456&amp;#123;">
+<meta name="twitter:image" content="http://yoursite.com/uploads/clip.png">
 
 
 
@@ -151,13 +155,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/前端开发/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/09/18/css_background_clip/"/>
 
 
 
 
 
-  <title>标签: 前端开发 | 矶良的博客</title>
+  <title>css实现文字填充图片 | 矶良的博客</title>
   
 
 
@@ -186,7 +190,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -300,82 +304,252 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>前端开发<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/18/css_background_clip/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Qian Jujie">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/pikaqiu.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="矶良的博客">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/10/18/css_mask/" itemprop="url">
-              
-                <span itemprop="name">css实现镂空效果（蒙版）</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">css实现文字填充图片</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-10-18T19:49:40+08:00"
-              content="2018-10-18" >
-          10-18
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-18T15:49:40+08:00">
+                2018-09-18
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Css/" itemprop="url" rel="index">
+                    <span itemprop="name">Css</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/09/18/css_background_clip/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/09/18/css_background_clip/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/09/18/css_background_clip/" class="leancloud_visitors" data-flag-title="css实现文字填充图片">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
+      
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/09/18/css_background_clip/" itemprop="url">
-              
-                <span itemprop="name">css实现文字填充图片</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-09-18T15:49:40+08:00"
-              content="2018-09-18" >
-          09-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
+        <h2 id="CSS-background-clip-属性"><a href="#CSS-background-clip-属性" class="headerlink" title="CSS background-clip 属性"></a>CSS background-clip 属性</h2><p>说起 background-clip ，可能很多人都很陌生。Clip 的意思为修剪，那么从字面意思上理解，background-clip 的意思即是背景裁剪。</p>
+<p>简单而言，background-clip 的作用就是设置元素的背景（背景图片或颜色）的填充规则。</p>
+<p>与 box-sizing 的取值非常类似，通常而言，它有 3 个取值：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    background-clip: border-box;  // 背景延伸到边框外沿（但是在边框之下）</span><br><span class="line">    background-clip: padding-box; // 边框下面没有背景，即背景延伸到内边距外沿。</span><br><span class="line">    background-clip: content-box; // 背景裁剪到内容区 (content-box) 外沿。</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>不过这些都不是本文的主角。本文的主角是 background-clip: text; ，当然现在只有 chrome 支持，所以通常想使用它，需要 -webkit-background-clip:text;。</p>
+<h2 id="何为-webkit-background-clip-text"><a href="#何为-webkit-background-clip-text" class="headerlink" title="何为 -webkit-background-clip:text"></a>何为 -webkit-background-clip:text</h2><p>使用了这个属性的意思是，以区块内的文字作为裁剪区域向外裁剪，文字的背景即为区块的背景，文字之外的区域都将被裁剪掉。</p>
+<h2 id="将文字设为透明-color-transparent"><a href="#将文字设为透明-color-transparent" class="headerlink" title="将文字设为透明 color: transparent"></a>将文字设为透明 color: transparent</h2><p>别急！当然还有更有意思的，上面由于文字设置了颜色，挡住了 div 块的背景，如果将文字设置为透明呢？文字是可以设置为透明的 color: transparent 。</p>
+<p>通过将文字设置为透明，原本 div 的背景就显现出来了，而文字以为的区域全部被裁剪了，这就是 -webkit-background-clip:text 的作用。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="selector-tag">img</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">url</span>(true.jpg) no-repeat;</span><br><span class="line">  <span class="attribute">background-origin</span>: border-box;</span><br><span class="line">  <span class="attribute">-webkit-background-clip</span>: text;</span><br><span class="line">  <span class="attribute">-webkit-text-fill-color</span>: transparent;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><img src="/uploads/clip.png"></p>
+<h2 id="各类效果制作"><a href="#各类效果制作" class="headerlink" title="各类效果制作"></a>各类效果制作</h2><p>了解了最基本的用法，接下来可以想想如何去运用这个元素制作一些效果。</p>
+<ul>
+<li>大大增强了文字的颜色填充选择</li>
+<li>文字颜色的动画效果</li>
+<li>配合其他元素，实现一些其他巧妙的用法</li>
+<li>文字的渐变色效果。</li>
+</ul>
+<p>其实还有很多有趣的用法，只要敢想并动手实践，会发现 CSS 真的乐趣挺多的。</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/css/" rel="tag"># css</a>
+          
+            <a href="/tags/前端开发/" rel="tag"># 前端开发</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/03/16/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/10/18/css_mask/" rel="prev" title="css实现镂空效果（蒙版）">
+                css实现镂空效果（蒙版） <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
 
 
           </div>
@@ -383,6 +557,20 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -403,8 +591,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -510,6 +707,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS-background-clip-属性"><span class="nav-number">1.</span> <span class="nav-text">CSS background-clip 属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#何为-webkit-background-clip-text"><span class="nav-number">2.</span> <span class="nav-text">何为 -webkit-background-clip:text</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将文字设为透明-color-transparent"><span class="nav-number">3.</span> <span class="nav-text">将文字设为透明 color: transparent</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#各类效果制作"><span class="nav-number">4.</span> <span class="nav-text">各类效果制作</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -660,6 +873,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -677,6 +894,18 @@
       <script id="dsq-count-scr" src="https://qianjujie.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2018/09/18/css_background_clip/';
+          this.page.identifier = '2018/09/18/css_background_clip/';
+          this.page.title = 'css实现文字填充图片';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://qianjujie.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   
